@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Around the U.S.</title>
+</head>
+<body class="page">
+
+  <!-- Header -->
+  <header class="header">
+    <img src="./images/logo.svg" alt="Around the U.S." class="logo">
+  </header>
+
+  <!-- Main body -->
+  <main class="content">
+
+    <!-- Profile -->
+    <section class="profile">
+      <div class="profile__info-box">
+        <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avatar">
+        <div class="profile__text">
+          <div class="profile__text-top">
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <button type="button" name="Edit profile" class="profile__edit-button" aria-label="Edit profile">
+              <!-- removed button icon in place of icon as background image of button -->
+              <!-- <img src="./images/edit.svg" alt="Edit profile" class="profile__edit-button-icon"> -->
+            </button>
+          </div>
+          <p class="profile__title">Explorer</p>
+        </div>
+      </div>
+      <button type="button" name="Add image" class="profile__add-button" aria-label="Add image">
+        <!-- removed button icon in place of icon as background image of button -->
+        <!-- <img src="./images/add-image.svg" alt="Add image" class="profile__add-button-icon"> -->
+      </button>
+    </section>
+
+    <!-- Elements -->
+    <section class="elements">
+
+      <!-- Element -->
+      <article class="element">
+        <img class="element__image" src="./images/yosemite.jpg" alt="Yosemite Valley">
+        <div class="element__name-box">
+          <h2 class="element__name">Yosemite Valley</h2>
+          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+        </div>
+      </article>
+
+      <!-- Element -->
+      <article class="element">
+        <img class="element__image" src="./images/stratton.jpeg" alt="Stratton Pond">
+        <div class="element__name-box">
+          <h2 class="element__name">Stratton Pond</h2>
+          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+        </div>
+      </article>
+
+      <!-- Element -->
+      <article class="element">
+        <img class="element__image" src="./images/penn2.jpeg" alt="Pennsylvania">
+        <div class="element__name-box">
+          <h2 class="element__name">Pennsylvania</h2>
+          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+        </div>
+      </article>
+
+      <!-- Element -->
+      <article class="element">
+        <img class="element__image" src="./images/dragons-tooth.jpeg" alt="Dragon's Tooth">
+        <div class="element__name-box">
+          <h2 class="element__name">Dragon's Tooth</h2>
+          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+        </div>
+      </article>
+
+      <!-- Element -->
+      <article class="element">
+        <img class="element__image" src="./images/pisgah.jpeg" alt="Pisgah National Forest">
+        <div class="element__name-box">
+          <h2 class="element__name">Pisgah National Forest</h2>
+          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+        </div>
+      </article>
+
+      <!-- Element -->
+      <article class="element">
+        <img class="element__image" src="./images/franklin.jpeg" alt="Georgia">
+        <div class="element__name-box">
+          <h2 class="element__name">Georgia</h2>
+          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2021 Around the U.S.</p>
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup">
+    <div class="popup__container">
+      <form action="#" name="Update profile" class="popup__form">
+        <h2 class="popup__header">Edit Profile</h2>
+        <div class="popup__input-container">
+          <input type="text" id="name" name="name" placeholder="Name" class="popup__input popup__input_role_name" required>
+          <input type="text" id="title" name="title" placeholder="Title" class="popup__input popup__input_role_title" required>
+        </div>
+        <button type="submit" class="popup__save-button">Save</button>
+      </form>
+      <button type="button" class="popup__close" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <script src="./scripts/index.js"></script>
+</body>
+</html>
+
