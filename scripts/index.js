@@ -1,4 +1,3 @@
-// variables
 let body = document.querySelector(".page");
 
 let editButton = document.querySelector(".profile__edit-button");
