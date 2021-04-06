@@ -17,11 +17,11 @@ let popupName = document.querySelector(".popup__input_role_name");
 
 let popupTitle = document.querySelector(".popup__input_role_title");
 
-// Retrieve profile object on page load
+
 let profile = {};
 updateProfile();
 
-// functions
+
 function updateProfile() {
   profile = {
     name: profileName.textContent,
@@ -44,7 +44,6 @@ function editProfile() {
 
 function saveProfile(e) {
   e.preventDefault();
-
   profileName.textContent = popupName.value;
   profileTitle.textContent = popupTitle.value;
 
@@ -56,7 +55,7 @@ function closeEditor() {
   profileEditor.classList.remove("popup_opened");
 }
 
-// event listeners
+
 editButton.addEventListener('click', editProfile);
 closeButton.addEventListener('click', closeEditor);
 profileEditorForm.addEventListener('submit', saveProfile);
