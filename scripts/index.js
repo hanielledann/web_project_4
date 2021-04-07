@@ -22,7 +22,7 @@ updateProfile();
 
 
 function updateProfile() {
-  profile = {
+    profile = {
     name: profileName.textContent,
     title: profileTitle.textContent
   }
@@ -33,7 +33,6 @@ function editProfile() {
   popupName.value = profile.name;
   popupTitle.value = profile.title;
   profileEditor.classList.add("popup_opened");
-
   body.addEventListener('keyup', function escOut(e) {
     if (e.key === 'Escape') {
       closeEditor();
@@ -45,7 +44,6 @@ function saveProfile(e) {
   e.preventDefault();
   profileName.textContent = popupName.value;
   profileTitle.textContent = popupTitle.value;
-
   updateProfile();
   closeEditor();
 }
@@ -53,7 +51,6 @@ function saveProfile(e) {
 function closeEditor() {
   profileEditor.classList.remove("popup_opened");
 }
-
 
 editButton.addEventListener('click', editProfile);
 closeButton.addEventListener('click', closeEditor);
