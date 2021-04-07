@@ -1,3 +1,7 @@
+let profileName = document.querySelector(".profile__name");
+
+let profileTitle = document.querySelector(".profile__title");
+
 let editButton = document.querySelector(".profile__edit-button");
 
 let closeButton = document.querySelector(".popup__close");
@@ -5,10 +9,6 @@ let closeButton = document.querySelector(".popup__close");
 let profileEditor = document.querySelector(".popup");
 
 let profileEditorForm = document.querySelector(".popup__form");
-
-let profileName = document.querySelector(".profile__name");
-
-let profileTitle = document.querySelector(".profile__title");
 
 
 let profile = {};
