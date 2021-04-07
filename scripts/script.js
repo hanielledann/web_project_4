@@ -8,6 +8,8 @@ let closeButton = document.querySelector(".popup__close");
 
 let profileEditor = document.querySelector(".popup");
 
+let profileEditorForm = document.querySelector(".popup__form");
+
 let popupName = document.querySelector(".popup__input_role_name");
 
 let popupTitle = document.querySelector(".popup__input_role_name");
