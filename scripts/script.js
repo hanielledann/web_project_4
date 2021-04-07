@@ -8,7 +8,11 @@ let closeButton = document.querySelector(".popup__close");
 
 let profileEditor = document.querySelector(".popup");
 
-let profileEditorForm = document.querySelector(".popup__form");
+let popupName = document.querySelector(".popup__input_role_name");
+
+let popupTitle = document.querySelector(".popup__input_role_name");
+
+let body = document.querySelector(".page");
 
 
 let profile = {};
@@ -26,7 +30,7 @@ function editProfile() {
   updateProfile();
   popupName.value = profile.name;
   popupTitle.value = profile.title;
-  profileEditor.classList.add(".popup__opened");
+  profileEditor.classList.add("popup__opened");
   body.addEventListener('keyup', function escOut(e) {
     if (e.key === 'Escape') {
       closeEditor();
@@ -43,7 +47,7 @@ function saveProfile(e) {
 }
 
 function closeEditor() {
-  profileEditor.classList.remove(".popup__opened");
+  profileEditor.classList.remove("popup__opened");
 }
 
 editButton.addEventListener('click', editProfile);
