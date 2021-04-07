@@ -1,3 +1,5 @@
+let body = document.querySelector(".page");
+
 let profileName = document.querySelector(".profile__name");
 
 let profileTitle = document.querySelector(".profile__title");
@@ -13,8 +15,6 @@ let profileEditorForm = document.querySelector(".popup__form");
 let popupName = document.querySelector(".popup__input_role_name");
 
 let popupTitle = document.querySelector(".popup__input_role_name");
-
-let body = document.querySelector(".page");
 
 
 let profile = {};
