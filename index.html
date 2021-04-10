@@ -9,7 +9,7 @@
 <body class="page">
 
   <header class="header">
-    <img src="./images/logo.svg" alt="Around the U.S." class="logo">
+    <img src="./images/logo.svg" alt="Around the U.S." class="header__logo">
   </header>
 
   <main class="content">
@@ -18,15 +18,15 @@
       <div class="profile__info-box">
         <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avatar">
         <div class="profile__text">
-          <div class="profile__text-top">
+          <div class="profile__text-container">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button type="button" name="Edit profile" class="profile__edit-button" aria-label="Edit profile">
+            <button type="button" class="profile__edit-button" aria-label="Edit profile">
             </button>
           </div>
           <p class="profile__title">Explorer</p>
         </div>
       </div>
-      <button type="button" name="Add image" class="profile__add-button" aria-label="Add image">
+      <button type="button" class="profile__add-button" aria-label="Add image">
       </button>
     </section>
 
@@ -36,7 +36,7 @@
         <img class="element__image" src="./images/yosemite.png" alt="Yosemite Valley">
         <div class="element__name-box">
           <h2 class="element__name">Yosemite Valley</h2>
-          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+          <button type="button" class="element__heart" aria-label="Like photo"></button>
         </div>
       </article>
 
@@ -44,7 +44,7 @@
         <img class="element__image" src="./images/lakelouise.png" alt="Lake Louise">
         <div class="element__name-box">
           <h2 class="element__name">Lake Louise</h2>
-          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+          <button type="button" class="element__heart" aria-label="Like photo"></button>
         </div>
       </article>
 
@@ -52,7 +52,7 @@
         <img class="element__image" src="./images/baldmountains.png" alt="Bald Mountains">
         <div class="element__name-box">
           <h2 class="element__name">Bald Mountains</h2>
-          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+          <button type="button" class="element__heart" aria-label="Like photo"></button>
         </div>
       </article>
 
@@ -60,7 +60,7 @@
         <img class="element__image" src="./images/latemar.png" alt="Latemar">
         <div class="element__name-box">
           <h2 class="element__name">Latemar</h2>
-          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+          <button type="button" class="element__heart" aria-label="Like photo"></button>
         </div>
       </article>
 
@@ -68,7 +68,7 @@
         <img class="element__image" src="./images/vanois.png" alt="Vanoise National Park">
         <div class="element__name-box">
           <h2 class="element__name">Vanoise National Park</h2>
-          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+          <button type="button" class="element__heart" aria-label="Like photo"></button>
         </div>
       </article>
       
@@ -76,7 +76,7 @@
         <img class="element__image" src="./images/lago.png" alt="Lago">
         <div class="element__name-box">
           <h2 class="element__name">Lago di Braies</h2>
-          <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+          <button type="button" class="element__heart" aria-label="Like photo"></button>
         </div>
       </article>
 
@@ -90,11 +90,11 @@
 
   <div class="popup">
     <div class="popup__container">
-      <form action="#" name="Update profile" class="popup__form">
-        <h2 class="popup__header">Edit Profile</h2>
+      <form action="#" name="UpdateProfile" class="popup__form" method="POST">
+        <h3 class="popup__header">Edit Profile</h3>
         <div class="popup__input-container">
-          <input type="text" id="name" name="name" placeholder="Name" class="popup__input popup__input_role_name" required>
-          <input type="text" id="title" name="title" placeholder="Title" class="popup__input popup__input_role_title" required>
+          <input type="text" name="name" placeholder="Name" class="popup__input popup__input_role_name" required>
+          <input type="text" name="aboutme" placeholder="About Me" class="popup__input popup__input_role_title" required>
         </div>
         <button type="submit" class="popup__save-button">Save</button>
       </form>
