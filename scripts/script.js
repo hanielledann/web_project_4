@@ -17,17 +17,6 @@ let popupName = document.querySelector(".popup__input_role_name");
 let popupTitle = document.querySelector(".popup__input_role_title");
 
 
-let profile = {};
-updateProfile();
-
-
-function updateProfile() {
-    profile = {
-    name: profileName.textContent,
-    title: profileTitle.textContent
-  }
-}
-
 function editProfile() {
   updateProfile();
   popupName.value = profile.name;
@@ -55,14 +44,4 @@ function closeEditor() {
 editButton.addEventListener('click', editProfile);
 closeButton.addEventListener('click', closeEditor);
 profileEditorForm.addEventListener('submit', saveProfile);
-
-// Hi Marina! Thank you so much for your feedback, it's been super helpful, 
-// and I am going to continue to make changes for the following project! When
-// I tried to make the changes to the js that you suggested, the edit button is
-// no longer functional. I've made all other changes needed, but when I fiddle with 
-// the edit button it doesn't want to function haha. If it is okay with you I'm going to 
-// leave it like this for now, and make more changes to js for project 5! Have a great rest of 
-// your weekend and thanks again for your great feedback :)
-
-
 
