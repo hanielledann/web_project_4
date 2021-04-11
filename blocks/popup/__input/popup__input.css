@@ -1,6 +1,3 @@
-@import url(./_role/popup__input_role_name.css);
-@import url(./_role/popup__input_role_title.css);
-
 .popup__input {
     font-size: 14px;
     line-height: 17px;
