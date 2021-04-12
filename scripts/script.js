@@ -1,5 +1,3 @@
-let body = document.querySelector(".page");
-
 let profileName = document.querySelector(".profile__name");
 
 let profileTitle = document.querySelector(".profile__title");
@@ -18,27 +16,24 @@ let popupTitle = document.querySelector(".popup__input_role_title");
 
 
 function editProfile() {
-  updateProfile();
-  popupName.value = profile.name;
-  popupTitle.value = profile.title;
+  profileName.textContent = popupName.value;
+  profileTitle.textContent = popupTitle.value;
   profileEditor.classList.add("popup_opened");
-  body.addEventListener('keyup', function escOut(e) {
+   
     if (e.key === 'Escape') {
       closeEditor();
     }
-  });
+}
+
+function closeEditor() {
+  profileEditor.classList.remove("popup_opened");
 }
 
 function saveProfile(e) {
   e.preventDefault();
   profileName.textContent = popupName.value;
   profileTitle.textContent = popupTitle.value;
-  updateProfile();
   closeEditor();
-}
-
-function closeEditor() {
-  profileEditor.classList.remove("popup_opened");
 }
 
 editButton.addEventListener('click', editProfile);
