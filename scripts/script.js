@@ -16,8 +16,8 @@ let popupTitle = document.querySelector(".popup__input_role_title");
 
 
 function editProfile() {
-  profileName.textContent = popupName.value;
-  profileTitle.textContent = popupTitle.value;
+  popupName.value = profileName.textContent;
+  popupTitle.value = profileTitle.textContent; 
   profileEditor.classList.add("popup_opened");
 }
 
@@ -27,8 +27,8 @@ function closeEditor() {
 
 function saveProfile(e) {
   e.preventDefault();
-  popupName.value = profileName.textContent;
-  popupTitle.value = profileTitle.textContent; 
+  profileName.textContent = popupName.value;
+  profileTitle.textContent = popupTitle.value;
   closeEditor();
 }
 
@@ -36,3 +36,6 @@ editButton.addEventListener('click', editProfile);
 closeButton.addEventListener('click', closeEditor);
 profileEditorForm.addEventListener('submit', saveProfile);
 
+// Ah! I finally understand what you've been trying to get me to fix all along.
+// Thank you for pushing me till I got it right!! 
+// - Dan :)
