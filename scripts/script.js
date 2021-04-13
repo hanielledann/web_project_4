@@ -19,10 +19,6 @@ function editProfile() {
   profileName.textContent = popupName.value;
   profileTitle.textContent = popupTitle.value;
   profileEditor.classList.add("popup_opened");
-   
-    if (e.key === 'Escape') {
-      closeEditor();
-    }
 }
 
 function closeEditor() {
@@ -31,8 +27,8 @@ function closeEditor() {
 
 function saveProfile(e) {
   e.preventDefault();
-  profileName.textContent = popupName.value;
-  profileTitle.textContent = popupTitle.value;
+  popupName.value = profileName.textContent;
+  popupTitle.value = profileTitle.textContent; 
   closeEditor();
 }
 
