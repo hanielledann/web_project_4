@@ -1,22 +1,18 @@
 .page {
-    font-family: 'Inter', Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%; */
-    background: #000000;
-    color: #FFFFFF;
-    max-width: 1280px;
-    min-width: 322px;
-    margin: 0 auto 0;
-    padding: 45px 0 60px;
-    box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000000;
+  color: #FFFFFF;
+  max-width: 1280px;
+  min-width: 322px;
+  margin: 0 auto 0;
+  padding: 45px 0 60px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 28px 0 36px;
   }
-  
-  @media (max-width: 480px) {
-    .page {
-      padding: 28px 0 36px;
-    }
-  }
-  
+}

@@ -5,10 +5,17 @@
 @import url(./__input/popup__input.css);
 @import url(./__form/popup__form.css);
 @import url(./__input-container/popup__input-container.css);
+@import url(./__image/popup__image.css);
+@import url(./__caption/popup__caption.css);
+@import url(./__figure/popup__figure.css);
+@import url(./__container/_role/popup__container_role_image.css);
 
 .popup {
-  background-color: rgba(0, 0, 0, .5);
-  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -18,5 +25,3 @@
   left: 0;
   z-index: 1;
 }
-
-

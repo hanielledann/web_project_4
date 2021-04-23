@@ -1,108 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./pages/index.css" />
   <title>Around the U.S.</title>
 </head>
+
 <body class="page">
 
   <header class="header">
-    <img src="./images/logo.svg" alt="Around the U.S." class="header__logo">
+    <img src="./images/logo.svg" alt="Around the U.S." class="logo" />
   </header>
 
   <main class="content">
 
     <section class="profile">
       <div class="profile__info-box">
-        <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avatar">
+        <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avatar" />
         <div class="profile__text">
-          <div class="profile__text-container">
+          <div class="profile__text-top">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button type="button" class="profile__edit-button" aria-label="Edit profile">
+            <button type="button" name="Edit profile" class="profile__edit-button" aria-label="Edit profile">
             </button>
           </div>
           <p class="profile__title">Explorer</p>
         </div>
       </div>
-      <button type="button" class="profile__add-button" aria-label="Add image">
+      <button type="button" name="Add image" class="profile__add-button" aria-label="Add image">
       </button>
     </section>
 
-    <section class="elements">
-
-      <article class="element">
-        <img class="element__image" src="./images/yosemite.png" alt="Yosemite Valley">
-        <div class="element__name-box">
-          <h2 class="element__name">Yosemite Valley</h2>
-          <button type="button" class="element__heart" aria-label="Like photo"></button>
-        </div>
-      </article>
-
-      <article class="element">
-        <img class="element__image" src="./images/lakelouise.png" alt="Lake Louise">
-        <div class="element__name-box">
-          <h2 class="element__name">Lake Louise</h2>
-          <button type="button" class="element__heart" aria-label="Like photo"></button>
-        </div>
-      </article>
-
-      <article class="element">
-        <img class="element__image" src="./images/baldmountains.png" alt="Bald Mountains">
-        <div class="element__name-box">
-          <h2 class="element__name">Bald Mountains</h2>
-          <button type="button" class="element__heart" aria-label="Like photo"></button>
-        </div>
-      </article>
-
-      <article class="element">
-        <img class="element__image" src="./images/latemar.png" alt="Latemar">
-        <div class="element__name-box">
-          <h2 class="element__name">Latemar</h2>
-          <button type="button" class="element__heart" aria-label="Like photo"></button>
-        </div>
-      </article>
-
-      <article class="element">
-        <img class="element__image" src="./images/vanois.png" alt="Vanoise National Park">
-        <div class="element__name-box">
-          <h2 class="element__name">Vanoise National Park</h2>
-          <button type="button" class="element__heart" aria-label="Like photo"></button>
-        </div>
-      </article>
-      
-      <article class="element">
-        <img class="element__image" src="./images/lago.png" alt="Lago">
-        <div class="element__name-box">
-          <h2 class="element__name">Lago di Braies</h2>
-          <button type="button" class="element__heart" aria-label="Like photo"></button>
-        </div>
-      </article>
-
-    </section>
-
+    <section class="elements"></section>
   </main>
 
   <footer class="footer">
     <p class="footer__copyright">&copy; 2021 Around the U.S.</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup_role_edit">
     <div class="popup__container">
-      <form action="#" name="UpdateProfile" class="popup__form" method="POST">
-        <h3 class="popup__header">Edit Profile</h3>
+      <form action="#" name="Update profile" class="popup__form popup__form_role_edit">
+        <h2 class="popup__header">Edit Profile</h2>
         <div class="popup__input-container">
-          <input type="text" name="name" placeholder="Name" class="popup__input popup__input_role_name" required>
-          <input type="text" name="aboutme" placeholder="About Me" class="popup__input popup__input_role_title" required>
+          <input type="text" id="name" name="name" placeholder="Name" class="popup__input popup__input_role_name"
+            required />
+          <input type="text" id="title" name="title" placeholder="Title" class="popup__input popup__input_role_title"
+            required />
         </div>
-        <button type="submit" class="popup__save-button">Save</button>
+        <button type="submit" class="popup__save-button popup__save-button_role_edit">
+          Save
+        </button>
       </form>
-      <button type="button" class="popup__close" aria-label="Close"></button>
+      <button type="button" class="popup__close popup__close_role_edit" aria-label="Close">
+      </button>
     </div>
   </div>
 
+  <div class="popup popup_role_add">
+    <div class="popup__container">
+      <form action="#" name="New place" class="popup__form popup__form_role_add">
+        <h2 class="popup__header">New place</h2>
+        <div class="popup__input-container">
+          <input type="text" id="image-title" name="name" placeholder="Title"
+            class="popup__input popup__input_role_image-title" required />
+          <input type="url" id="image-link" name="title" placeholder="Image link"
+            class="popup__input popup__input_role_image-link" required />
+        </div>
+        <button type="submit" class="popup__save-button popup__save-button_role_add">
+          Create
+        </button>
+      </form>
+      <button type="button" class="popup__close popup__close_role_add" aria-label="Close">
+      </button>
+    </div>
+  </div>
+
+  <div class="popup popup_role_image">
+    <div class="popup__container popup__container_role_image">
+      <figure class="popup__figure">
+        <img src="#" alt="#" class="popup__image" />
+        <figcaption class="popup__caption"></figcaption>
+      </figure>
+      <button type="button" class="popup__close popup__close_role_image" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <template id="place-template">
+    <article class="element">
+      <img class="element__image" src="#" alt="" />
+      <div class="element__name-box">
+        <h2 class="element__name"></h2>
+        <button type="button" name="Like image" class="element__heart" aria-label="Like photo"></button>
+      </div>
+      <button type="button" name="Delete image" class="element__delete" aria-label="Delete photo"></button>
+    </article>
+  </template>
+
   <script src="./scripts/script.js"></script>
 </body>
-</html>
 
+</html>
