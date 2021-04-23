@@ -20,3 +20,7 @@
   .element__delete:hover {
     opacity: .5;
   }
+
+  /* Hello! So, the delete.svg image shows up when I pull up my page on the browser,
+  /* but when I view it through github, it's not there. Let me know if you notice this
+  /* as well, if so - how could I fix this? Thanks!
