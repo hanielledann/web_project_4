@@ -23,28 +23,28 @@ updateProfile();
 
 const initialCards = [
   {
-    name: "Yosemite Valley",
-    link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
+    name: "Amherstburg",
+    link: "./images/Amherstburg.jpeg",
   },
   {
-    name: "Lake Louise",
-    link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
+    name: "Cuba",
+    link: "./images/Cuba.jpeg",
   },
   {
-    name: "Bald Mountains",
-    link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
+    name: "Dominican Republic",
+    link: "./images/Dominican.jpeg",
   },
   {
-    name: "Latemar",
-    link: "https://code.s3.yandex.net/web-code/latemar.jpg"
+    name: "Goderich Beach",
+    link: "./images/Goderich.jpeg",
   },
   {
-    name: "Vanoise National Park",
-    link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
+    name: "Maitland River",
+    link: "./images/Maitland.jpeg",
   },
   {
-    name: "Lago di Braies",
-    link: "https://code.s3.yandex.net/web-code/lago.jpg"
+    name: "Toronto",
+    link: "./images/Toronto.jpeg"
   }
 ]; 
 
@@ -61,7 +61,15 @@ function updateProfile() {
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
-  document.addEventListener("keydown", closeWithEscape);
+  document.addEventListener("keydown", closeEsc);
+  document.addEventListener("click", clickAway);
+}
+
+function closePopup() {
+  const openPopup = document.querySelector(".popup_opened");
+  openPopup.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closeEsc);
+  document.removeEventListener("click", clickAway);
 }
 
 function editProfile() {
@@ -115,12 +123,6 @@ function saveProfile(e) {
   closePopup();
 }
 
-function closePopup() {
-  const openPopup = document.querySelector(".popup_opened");
-  openPopup.classList.remove("popup_opened");
-  document.removeEventListener("keydown", closeWithEscape);
-}
-
 function openPreview(e) {
   popupImage.src = e.target.src;
   popupImage.alt = e.target.alt;
@@ -128,8 +130,14 @@ function openPreview(e) {
   openPopup(imagePreview);
 }
 
-function closeWithEscape(e) {
+function closeEsc(e) {
   if (e.key === "Escape") {
+    closePopup();
+  }
+}
+
+function clickAway(e) {
+  if (e.target.classList.contains("popup_opened")) {
     closePopup();
   }
 }

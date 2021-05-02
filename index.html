@@ -19,14 +19,14 @@
 
     <section class="profile">
       <div class="profile__info-box">
-        <img src="./images/cousteau.jpg" alt="Jacques Cousteau" class="profile__avatar" />
+        <img src="./images/DAN.png" alt="Danielle Hann" class="profile__avatar" />
         <div class="profile__text">
           <div class="profile__text-container">
-            <h1 class="profile__name">Jacques Cousteau</h1>
+            <h1 class="profile__name">DAN!</h1>
             <button type="button" name="Edit profile" class="profile__edit-button" aria-label="Edit profile">
             </button>
           </div>
-          <p class="profile__title">Explorer</p>
+          <p class="profile__title">Wanderer</p>
         </div>
       </div>
       <button type="button" name="Add image" class="profile__add-button" aria-label="Add image">
@@ -37,7 +37,7 @@
   </main>
 
   <footer class="footer">
-    <p class="footer__copyright">&copy; 2021 Around the U.S.</p>
+    <p class="footer__copyright">&copy; 2021 Around the world.</p>
   </footer>
 
   <div class="popup popup_role_edit">
@@ -45,10 +45,15 @@
       <form action="#" name="Update profile" class="popup__form popup__form_role_edit">
         <h2 class="popup__header">Edit Profile</h2>
         <div class="popup__input-container">
+
           <input type="text" id="name" name="name" placeholder="Name" class="popup__input popup__input_role_name"
-            required />
-          <input type="text" id="title" name="title" placeholder="Title" class="popup__input popup__input_role_title"
-            required />
+          required minlength="2" maxlength="40" />
+        <span class="popup__input-error popup__input-error_name"></span>
+
+        <input type="text" id="title" name="title" placeholder="Title" class="popup__input popup__input_role_title"
+          required minlength="2" maxlength="200" />
+        <span class="popup__input-error popup__input-error_title"></span>
+
         </div>
         <button type="submit" class="popup__save-button popup__save-button_role_edit">
           Save
@@ -99,7 +104,8 @@
     </article>
   </template>
 
-  <script src="./scripts/script.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 
 </html>
