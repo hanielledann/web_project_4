@@ -143,7 +143,6 @@ function clickAway(e) {
   }
 }
 
-openAvatar.addEventListener("click", openPopup);
 editButton.addEventListener("click", editProfile);
 addButton.addEventListener("click", openPlaceAdder);
 closeProfileEditor.addEventListener("click", closePopup);
