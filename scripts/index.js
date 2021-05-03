@@ -1,4 +1,5 @@
 const body = document.querySelector(".page");
+const profileAvatar = document.querySelector(".profile__avatar");
 const profileName = document.querySelector(".profile__name");
 const profileTitle = document.querySelector(".profile__title");
 const placesContainer = document.querySelector(".elements");
@@ -142,6 +143,7 @@ function clickAway(e) {
   }
 }
 
+openAvatar.addEventListener("click", openPopup);
 editButton.addEventListener("click", editProfile);
 addButton.addEventListener("click", openPlaceAdder);
 closeProfileEditor.addEventListener("click", closePopup);
@@ -149,3 +151,4 @@ closeImageAdder.addEventListener("click", closePopup);
 closePreviewButton.addEventListener("click", closePopup);
 profileEditorForm.addEventListener("submit", saveProfile);
 imageAdderForm.addEventListener("submit", savePlace);
+
