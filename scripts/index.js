@@ -88,20 +88,31 @@ function openPlaceAdder() {
 
 function createCard(title, link) {
   const placeTemplate = document.querySelector("#place-template").content;
+
   const newPlace = placeTemplate.querySelector(".element").cloneNode(true);
+
   const deleteButton = newPlace.querySelector(".element__delete");
+
   deleteButton.addEventListener("click", (e) =>
     e.target.parentElement.remove()
     );
+
   const likeButton = newPlace.querySelector(".element__heart");
+
   likeButton.addEventListener("click", (e) =>
     e.target.classList.toggle("element__heart_liked")
-  );
+    );
+
   const placeImage = newPlace.querySelector(".element__image");
+
   placeImage.addEventListener("click", openPreview);
+
   newPlace.querySelector(".element__name").textContent = title;
+
   placeImage.src = link;
+
   placeImage.alt = `${title}`;
+  
   return newPlace;
 }
 
